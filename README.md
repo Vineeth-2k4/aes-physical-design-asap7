@@ -63,6 +63,14 @@ Clock tree implementation and clock distribution.
 
 ![Clock Tree Debugger](screenshots/05_cts/clock_tree_debugger.png)
 
+## Clock Timing Summary
+
+![Clock Timing Summary](screenshots/05_cts/clock_timing_summary.png)
+
+## Clock Tree Summary
+
+![Clock Tree Summary](screenshots/05_cts/clock_tree_summary.png)
+
 ---
 
 ## 7. Routing
@@ -83,14 +91,7 @@ Post-route physical implementation.
 
 ![Hold Timing](screenshots/06_routing/hold_timing_map.png)
 
-## Clock Timing Summary
 
-![Clock Timing Summary](screenshots/05_cts/clock_timing_summary.png)
-
-## Clock Tree Summary
-
-![Clock Tree Summary](screenshots/05_cts/clock_tree_summary.png)
- 
 ---
 ## 7. Timing Analysis Reports
 

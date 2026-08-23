@@ -1,6 +1,6 @@
 # aes-physical-design-asap7
 RTL-to-Routing physical design implementation of an AES core using Cadence Innovus and ASAP7 technology.
-# AES Physical Design — RTL to Routing
+# AES Physical Design — RTL to Routing with Post-Routing timing analysis.
 
 Physical design implementation of an AES cryptographic design using Cadence Innovus and ASAP7 technology.
 

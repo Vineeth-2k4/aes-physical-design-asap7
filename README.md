@@ -81,7 +81,7 @@ Post-route physical implementation.
 
 ---
 
-# Timing Analysis
+# Timing Views
 
 ## Setup Timing
 

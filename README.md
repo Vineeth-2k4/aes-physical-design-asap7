@@ -30,7 +30,7 @@ Initial floorplan with IO placement.
 
 Standard-cell placement after placement optimization.
 
-![Placement](placenebt .png)
+![Placement](placement .png)
 ![Placement](placement 1.png)
 
 ---

@@ -1,4 +1,19 @@
-# AES Physical Design — RTL to Post-Route Timing Analysis
+# AES Physical Design — RTL to Post-Route Analysis using Cadence Innovus & ASAP7
+> Complete ASIC physical design implementation of an AES cryptographic core from RTL through synthesis, floorplanning, power planning, placement, CTS, routing, and post-route timing and power analysis.
+## Project Snapshot
+
+| Parameter | Value |
+|---|---|
+| Design | AES Cryptographic Core |
+| RTL Source | Secworks AES |
+| Technology | ASAP7 |
+| Tool | Cadence Innovus 20.11 |
+| Flow | RTL → Post-Route Analysis |
+| Clock Period | 700 ps |
+| Target Frequency | ~1.43 GHz |
+| Standard Cells | 7,550 |
+| Sequential Elements | 2,590 |
+| Nets | 7,695 |
 
 <p align="center">
   <img src="screenshots/06_routing/routed_design.png" width="900">
@@ -164,6 +179,7 @@ Power Analysis
 
 ```
 ---
+
 # Tools and Technology
 | Category             | Tool / Technology     |
 | -------------------- | --------------------- |
@@ -176,6 +192,7 @@ Power Analysis
 | Starting RTL         | Secworks AES          |
 
 ---
+
 # Design Information
 | Parameter            |                  Value |
 | -------------------- | ---------------------: |
@@ -184,14 +201,34 @@ Power Analysis
 | Technology           |                  ASAP7 |
 | Physical Design Tool |  Cadence Innovus 20.11 |
 | Clock Period         |                 700 ps |
-| Target Frequency     |              ~1.43 GHz |
-| Standard Cells       |                  7,550 |
-| Sequential Elements  |                  2,590 |
-| Clock Gates          |                     31 |
-| Clock Buffers        |                     52 |
-| Nets                 |                  7,695 |
+
 
 ---
+# Design Constraints
+
+The design was constrained using an SDC-based timing environment.
+
+### Clock
+
+| Constraint | Value |
+|---|---:|
+| Clock Name | `[ADD VALUE]` |
+| Clock Port | `[ADD VALUE]` |
+| Period | 700 ps |
+| Waveform | `[ADD VALUE]` |
+
+### I/O Constraints
+
+| Constraint | Value |
+|---|---:|
+| Input Delay | `[ADD VALUE]` |
+| Output Delay | `[ADD VALUE]` |
+| Input Transition | `[ADD VALUE]` |
+| Output Load | `[ADD VALUE]` |
+| Driving Cell | `[ADD VALUE]` |
+
+--- 
+
 # Physical Design Flow
 
 The design was taken through the following ASIC physical design stages:
@@ -507,6 +544,7 @@ Design statistics were collected from the physical implementation to evaluate th
 <p align="center"> <img src="screenshots/09_design_statistics/design_browser.png" width="900"> </p>
 
 ## 9.4 Design Statistics
+
 | Metric              |        Result |
 | ------------------- | ------------: |
 | Standard Cells      |         7,550 |
@@ -756,6 +794,7 @@ aes-physical-design-asap7/
 ```
 
 # Skills Demonstrated
+
 ## Physical Design
 RTL-to-GDSII implementation flow
 Floorplanning
@@ -770,6 +809,7 @@ Global routing
 Detailed routing
 Congestion analysis
 Physical verification
+
 ## Static Timing Analysis
 SDC constraints
 Clock constraints
@@ -780,12 +820,14 @@ TNS
 Critical path analysis
 Clock skew
 Post-route timing analysis
+
 ## Power Analysis
 Internal power
 Switching power
 Leakage power
 Total power
 Power distribution analysis
+
 ## Automation
 Tcl scripting
 Cadence Innovus automation
@@ -948,6 +990,13 @@ The project provides practical experience with:
 
 Cadence Innovus • ASAP7 • Tcl • Floorplanning • Power Planning • Placement • CTS • Routing • Post-Route STA • Power Analysis • Physical Design Debugging
 
+---
+
+## Final Physical Implementation
+
+<p align="center">
+  <img src="screenshots/06_routing/routed_design.png" width="900">
+</p>
 
 
 

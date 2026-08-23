@@ -36,10 +36,13 @@ Power distribution network with power rings and stripes.
 ## 3. Placement
 
 Standard-cell placement.
-![Placement](placement1.png) 
 
-## 
+![Placement](placement1.png)
+
+### Placement with Virtual Routing
+
 Standard-cell placement with virtual routing.
+
 ![Placement](placement.png)
 
 ---

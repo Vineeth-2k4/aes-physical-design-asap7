@@ -90,31 +90,50 @@ Post-route physical implementation.
 ## Clock Tree Summary
 
 ![Clock Tree Summary](screenshots/05_cts/clock_tree_summary.png)
-
+ 
 ---
+
 ## ASAP7 Standard Cell Layout Views
 
-Selected ASAP7 standard-cell layout views for reference.
+Additional layout views of selected standard cells from the ASAP7 library.
 
 <details>
-<summary>View standard-cell layouts</summary>
+<summary>View all 12 standard-cell layouts</summary>
 
-### AND2X2
+### 1. AND2X2
 ![AND2X2](screenshots/asap7_cell_views/AND2X2_ASAP7.png)
 
-### AND3X1
+### 2. AND3X1
 ![AND3X1](screenshots/asap7_cell_views/AND3X1_ASAP7.png)
 
-### DFF
+### 3. DFF
 ![DFF](screenshots/asap7_cell_views/DFF_ASAP7.png)
 
-### ICG
+### 4. Full Adder
+![Full Adder](screenshots/asap7_cell_views/FULL_ADDER_ASAP7.png)
+
+### 5. Half Adder
+![Half Adder](screenshots/asap7_cell_views/HALF_ADDER_ASAP7.png)
+
+### 6. Integrated Clock Gating Cell
 ![ICG](screenshots/asap7_cell_views/ICG_ASAP7.png)
 
-### NAND3X2
+### 7. NAND3X2
 ![NAND3X2](screenshots/asap7_cell_views/NAND3X2_ASAP7.png)
 
-### XOR
+### 8. NOR
+![NOR](screenshots/asap7_cell_views/NOR_ASAP7.png)
+
+### 9. OAI
+![OAI](screenshots/asap7_cell_views/OAI_ASAP7.png)
+
+### 10. OR
+![OR](screenshots/asap7_cell_views/OR_ASAP7.png)
+
+### 11. XNOR
+![XNOR](screenshots/asap7_cell_views/XNOR_ASAP7.png)
+
+### 12. XOR
 ![XOR](screenshots/asap7_cell_views/XOR_ASAP7.png)
 
 </details>

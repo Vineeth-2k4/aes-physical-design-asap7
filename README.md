@@ -92,7 +92,32 @@ Post-route physical implementation.
 ![Clock Tree Summary](screenshots/05_cts/clock_tree_summary.png)
 
 ---
+## ASAP7 Standard Cell Layout Views
 
+Selected ASAP7 standard-cell layout views for reference.
+
+<details>
+<summary>View standard-cell layouts</summary>
+
+### AND2X2
+![AND2X2](screenshots/asap7_cell_views/AND2X2_ASAP7.png)
+
+### AND3X1
+![AND3X1](screenshots/asap7_cell_views/AND3X1_ASAP7.png)
+
+### DFF
+![DFF](screenshots/asap7_cell_views/DFF_ASAP7.png)
+
+### ICG
+![ICG](screenshots/asap7_cell_views/ICG_ASAP7.png)
+
+### NAND3X2
+![NAND3X2](screenshots/asap7_cell_views/NAND3X2_ASAP7.png)
+
+### XOR
+![XOR](screenshots/asap7_cell_views/XOR_ASAP7.png)
+
+</details>
 ## Key Results
 
 | Metric | Result |

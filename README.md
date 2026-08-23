@@ -177,49 +177,49 @@ Additional layout views of standard cells used in the ASAP7 library.
     </td>
     <td align="center">
       <b>DFF</b><br>
-      <img src="screenshots/10_asap7_cell_views/DFF_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/DFF_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>Full Adder</b><br>
-      <img src="screenshots/10_asap7_cell_views/FULL_ADDER_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/FULL_ADDER_ASAP7.png" width="220">
     </td>
   </tr>
 
   <tr>
     <td align="center">
       <b>Half Adder</b><br>
-      <img src="screenshots/10_asap7_cell_views/HALF_ADDER_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/HALF_ADDER_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>Integrated Clock Gating</b><br>
-      <img src="screenshots/10_asap7_cell_views/ICG_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/ICG_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>NAND3X2</b><br>
-      <img src="screenshots/10_asap7_cell_views/NAND3X2_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/NAND3X2_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>NOR2X2</b><br>
-      <img src="screenshots/10_asap7_cell_views/NOR_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/NOR_ASAP7.png" width="220">
     </td>
   </tr>
 
   <tr>
     <td align="center">
       <b>OAI321X</b><br>
-      <img src="screenshots/10_asap7_cell_views/OAI_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/OAI_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>OR2X6</b><br>
-      <img src="screenshots/10_asap7_cell_views/OR_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/OR_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>NOR2X5</b><br>
-      <img src="screenshots/10_asap7_cell_views/NOR_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/NOR_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>XNOR2X1</b><br>
-      <img src="screenshots/10_asap7_cell_views/XNOR_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/XNOR_ASAP7.png" width="220">
     </td>
   </tr>
 </table>

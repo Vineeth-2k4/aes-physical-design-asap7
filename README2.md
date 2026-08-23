@@ -347,13 +347,17 @@ Meet setup and hold timing requirements.
 
 ## CTS Implementation
 <p align="center"> <img src="screenshots/05_cts/cts.png" width="900"> </p>
+
 ## Clock Timing Summary
 <p align="center"> <img src="screenshots/05_cts/clock_timing_summary.png" width="900"> </p>
+
 ## Clock Tree Summary
 <p align="center"> <img src="screenshots/05_cts/clock_tree_summary.png" width="900"> </p>
+
 ## Clock Tree Debugger
 The clock tree was inspected after CTS to analyze clock distribution, skew, and latency.
 <p align="center"> <img src="screenshots/05_cts/clock_tree_debugger.png" width="900"> </p>
+
 ## CTS Results
 | Metric             |        Result |
 | ------------------ | ------------: |
@@ -381,10 +385,13 @@ Account for post-route parasitic effects.
 
 ## Routed Design
 <p align="center"> <img src="screenshots/06_routing/routed_design.png" width="900"> </p>
+
 ## Setup Timing Map After Routing
 <p align="center"> <img src="screenshots/06_routing/setup_timing_map.png" width="900"> </p>
+
 ## Hold Timing Map After Routing
 <p align="center"> <img src="screenshots/06_routing/hold_timing_map.png" width="900"> </p>
+
 ## Routing Results
 | Metric                  |        Result |
 | ----------------------- | ------------: |
@@ -513,6 +520,7 @@ Design statistics were collected from the physical implementation to evaluate th
 | Placement Density   | `[ADD VALUE]` |
 
 ---
+
 # Physical Design Stage Summary
 | Stage                | Why It Is Performed                | Main Checks                             |
 | -------------------- | ---------------------------------- | --------------------------------------- |
@@ -528,7 +536,9 @@ Design statistics were collected from the physical implementation to evaluate th
 | Design Statistics    | Evaluate physical implementation   | Area, utilization, density              |
 
 ---
+
 # Final Implementation Results
+
 ## Implementation Summary
 | Metric              |                Result |
 | ------------------- | --------------------: |

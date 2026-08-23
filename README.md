@@ -104,6 +104,21 @@ Post-route physical implementation.
 ### Timing Summary
 ![Timing Summary](screenshots/07_timing_analysis/timing_summary.png)
 
+---
+## 8. Power Analysis
+
+### Total Power
+![Total Power](screenshots/08_power_analysis/total_power.png)
+
+### Leakage Power
+![Leakage Power](screenshots/08_power_analysis/leakage_power.png)
+
+### Power Distribution
+![Power Distribution](screenshots/08_power_analysis/power_distribution.png)
+
+---
+
+
 ## ASAP7 Standard Cell Layout Views
 
 Additional layout views of selected standard cells from the ASAP7 library.

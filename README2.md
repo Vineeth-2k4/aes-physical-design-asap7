@@ -1,7 +1,7 @@
 # AES Physical Design — RTL to Post-Route Analysis using Cadence Innovus & ASAP7
 > Complete ASIC physical design implementation of an AES cryptographic core from RTL through synthesis, floorplanning, power planning, placement, CTS, routing, and post-route timing and power analysis.
 ## Project Snapshot
-<t align="center">
+
 | Parameter | Value |
 |---|---|
 | Design | AES Cryptographic Core |
@@ -14,7 +14,7 @@
 | Standard Cells | 7,550 |
 | Sequential Elements | 2,590 |
 | Nets | 7,695 |
-</t>
+
 
 <p align="center">
   <img src="screenshots/06_routing/routed_design.png" width="900">

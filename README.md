@@ -22,7 +22,7 @@ RTL → Synthesis → Floorplan → Power Planning → Placement → CTS → Rou
 
 Initial floorplan with IO placement.
 
-![Floorplan](floorplan_io.png)
+![Floorplan](screenshots/01_floorplan/floorplan_io.png)
 
 ---
 

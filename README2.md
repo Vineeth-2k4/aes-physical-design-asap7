@@ -139,6 +139,8 @@ aes_inv_sbox.v
 The AES RTL architecture was not developed as part of this project.
 
 The contribution of this project is the ASIC physical design implementation of the AES RTL, including:
+
+```text
 RTL
  ↓
 Synthesis
@@ -156,7 +158,7 @@ Clock Tree Synthesis
 Routing
  ↓
 Post-Route Timing Analysis
-
+```
 ---
 # Tools and Technology
 | Category             | Tool / Technology     |

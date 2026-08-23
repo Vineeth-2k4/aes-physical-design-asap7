@@ -77,19 +77,19 @@ Post-route physical implementation.
 
 ## Setup Timing
 
-![Setup Timing](setup_timing_map.png)
+![Setup Timing](screenshots/06_routing/setup_timing_map.png)
 
 ## Hold Timing
 
-![Hold Timing](hold_timing_map.png)
+![Hold Timing](screenshots/06_routing/hold_timing_map.png)
 
 ## Clock Timing Summary
 
-![Clock Timing Summary](clock_timing_summary.png)
+![Clock Timing Summary](screenshots/05_cts/clock_timing_summary.png)
 
 ## Clock Tree Summary
 
-![Clock Tree Summary](clock_tree_summary.png)
+![Clock Tree Summary](screenshots/05_cts/clock_tree_summary.png)
 
 ---
 

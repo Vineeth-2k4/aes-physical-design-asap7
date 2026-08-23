@@ -26,36 +26,41 @@ Initial floorplan with IO placement.
 
 ---
 
-## 2. Placement
-
-Standard-cell placement after placement optimization.
-
-![Placement](placement.png)
-![Placement](placement1.png)
-
----
-
-## 3. Power Planning
+## 2. Power Planning
 
 Power distribution network with power rings and stripes.
 
 ![Power Planning](power_grid.png)
 
 ---
+## 3. Placement
 
-## 4. Clock Tree Synthesis
+Standard-cell placement.
+![Placement](placement1.png)
+Standard-cell placement with virtual routing.
+![Placement](placement.png)
+
+---
+
+## 4. Pre-CTS 
+
+Standard-cell placement after placement optimization.
+![Pre-CTS](pre-cts.png)
+
+
+## 5. Clock Tree Synthesis
 
 Clock tree implementation and clock distribution.
 
 ![CTS](cts.png)
 
-### Clock Tree Debugger
+### 6. Clock Tree Debugger
 
 ![Clock Tree Debugger](clock_tree_debugger.png)
 
 ---
 
-## 5. Routing
+## 7. Routing
 
 Post-route physical implementation.
 

@@ -191,6 +191,7 @@ Post-Route Timing Analysis
 # Physical Design Flow
 
 The design was taken through the following ASIC physical design stages:
+```text
                     AES RTL
                        │
                        ▼
@@ -219,7 +220,7 @@ The design was taken through the following ASIC physical design stages:
                  ┌─────┼─────┐
                  ▼     ▼     ▼
               Timing  Power  Area
-
+```
 ---
 # 1. Floorplanning
 

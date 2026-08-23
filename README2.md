@@ -90,8 +90,10 @@ Post-Route Timing Analysis
    ├── Clock Analysis
    ├── Area Analysis
    └── Power Analysis
+```
 ---
-##Project Objectives
+
+## Project Objectives
 
 The main objectives of this project were:
 

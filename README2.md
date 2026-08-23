@@ -140,16 +140,30 @@ Source Repository
 https://github.com/secworks/aes/tree/master/src/rtl
 
 The RTL source contains modules including:
-
-aes.v
-aes_core.v
-aes_encipher_block.v
-aes_decipher_block.v
-aes_key_mem.v
-aes_sbox.v
-aes_inv_sbox.v
-
+```text
+aes.v , aes_core.v , aes_encipher_block.v , aes_decipher_block.v , aes_key_mem.v , aes_sbox.v , aes_inv_sbox.v
+```
 ---
+# What I Implemented
+
+Starting from the Secworks AES RTL, I implemented and analyzed the following ASIC physical-design stages:
+
+- Design initialization and library setup
+- SDC-based timing constraints
+- Floorplanning and IO placement
+- Power rings and power stripes
+- Standard-cell placement
+- Placement optimization
+- Clock Tree Synthesis
+- Global and detailed routing
+- Post-route setup and hold timing analysis
+- Clock skew analysis
+- Area and placement-density analysis
+- Power analysis
+- Physical-design debugging
+- Tcl-based implementation and report generation
+
+--- 
 
 ## Project Scope
 
@@ -269,12 +283,13 @@ The design was taken through the following ASIC physical design stages:
 Floorplanning establishes the physical boundaries of the design and defines the environment for placement and routing.
 
 ### Objectives
-Define die and core boundaries.
-Set the target core utilization.
-Define the core aspect ratio.
-Place input and output pins.
-Provide sufficient routing resources.
-Prepare the design for power planning and placement.
+- Define die and core boundaries.
+- Set the target core utilization.
+- Define the core aspect ratio.
+- Place input and output pins.
+- Provide sufficient routing resources.
+- Prepare the design for power planning and placement.
+
 ## Floorplan Parameters
 | Parameter        |         Value |
 | ---------------- | ------------: |
@@ -284,6 +299,7 @@ Prepare the design for power planning and placement.
 | Core Height      | `[ADD VALUE]` |
 | Core Utilization | `[ADD VALUE]` |
 | Aspect Ratio     | `[ADD VALUE]` |
+
 ## Floorplan with IO Placement
 <p align="center"> <img src="screenshots/01_floorplan/floorplan_io.png" width="900"> </p>
 
@@ -296,12 +312,13 @@ A power distribution network (PDN) was created to distribute the VDD and VSS sup
 The power network consists of power rings and power stripes connected to the standard-cell power rails.
 
 ### Objectives
-Provide reliable VDD/VSS distribution.
-Connect standard-cell power rails to the global power network.
-Provide sufficient current-carrying capability.
-Maintain power connectivity throughout the core.
-Reduce IR-drop and electromigration risk.
-Verify power-via connectivity.
+- Provide reliable VDD/VSS distribution.
+- Connect standard-cell power rails to the global power network.
+- Provide sufficient current-carrying capability.
+- Maintain power connectivity throughout the core.
+- Reduce IR-drop and electromigration risk.
+- Verify power-via connectivity.
+
 ## Power Network Configuration
 | Parameter        | Value         |
 | ---------------- | ------------- |
@@ -323,17 +340,18 @@ Standard cells were placed within the defined core area.
 
 Placement attempts to achieve a balance between:
 
-Timing
-Placement density
-Routing congestion
-Wirelength
-Routability
+- Timing
+- Placement density
+- Routing congestion
+- Wirelength
+- Routability
+
 ### Placement Objectives
-Achieve legal standard-cell placement.
-Optimize critical timing paths.
-Maintain acceptable placement density.
-Reduce routing congestion.
-Prepare the design for CTS and routing.
+- Achieve legal standard-cell placement.
+- Optimize critical timing paths.
+- Maintain acceptable placement density.
+- Reduce routing congestion.
+- Prepare the design for CTS and routing.
 
 ## Placement
 <p align="center"> <img src="screenshots/03_placement/placement.png" width="900"> </p> 
@@ -353,11 +371,11 @@ Pre-CTS optimization was performed after placement and before Clock Tree Synthes
 The purpose of this stage is to improve the physical and timing quality of the design before introducing the clock network.
 
 ### Objectives
-Improve setup timing.
-Optimize critical paths.
-Reduce congestion.
-Improve placement quality.
-Prepare the design for CTS.
+- Improve setup timing.
+- Optimize critical paths.
+- Reduce congestion.
+- Improve placement quality.
+- Prepare the design for CTS.
 
 ## Pre-CTS Result
 <p align="center"> <img src="screenshots/04_prects/prects.png" width="900"> </p>
@@ -370,18 +388,18 @@ Clock Tree Synthesis (CTS) was performed to distribute the clock signal from the
 
 The primary objectives of CTS are to control:
 
-Clock skew
-Clock latency
-Clock transition
-Clock insertion delay
-Clock-tree power
+- Clock skew
+- Clock latency
+- Clock transition
+- Clock insertion delay
+- Clock-tree power
 
 ### CTS Objectives
-Build a balanced clock distribution network.
-Minimize clock skew.
-Control clock latency.
-Maintain acceptable clock transition.
-Meet setup and hold timing requirements.
+- Build a balanced clock distribution network.
+- Minimize clock skew.
+- Control clock latency.
+- Maintain acceptable clock transition.
+- Meet setup and hold timing requirements.
 
 ## CTS Implementation
 <p align="center"> <img src="screenshots/05_cts/cts.png" width="900"> </p>
@@ -415,11 +433,11 @@ After CTS, the design was routed using global and detailed routing.
 Routing establishes the physical interconnections between the placed standard cells, clock network, IOs, and other design components.
 
 ### Routing Objectives
-Complete all signal connections.
-Maintain design-rule compliance.
-Minimize routing congestion.
-Preserve timing quality.
-Account for post-route parasitic effects.
+- Complete all signal connections.
+- Maintain design-rule compliance.
+- Minimize routing congestion.
+- Preserve timing quality.
+- Account for post-route parasitic effects.
 
 ## Routed Design
 <p align="center"> <img src="screenshots/06_routing/routed_design.png" width="900"> </p>
@@ -472,10 +490,12 @@ Setup analysis verifies that data reaches the receiving sequential element befor
 Hold analysis verifies that data does not arrive too early at the receiving sequential element after the active clock edge.
 
 ### Hold Results
-Metric	Result
-Worst Hold Slack	+0.165 ps
-Hold Violations	0
-Critical Hold Path	[ADD VALUE]
+| Metric             |        Result |
+| ------------------ | ------------: |
+| Worst Hold Slack   |     +0.165 ps |
+| Hold Violations    |             0 |
+| Critical Hold Path | `[ADD VALUE]` |
+
 
 ## Hold Timing Report
 <p align="center"> <img src="screenshots/07_timing_analysis/hold.png" width="900"> </p>
@@ -507,10 +527,10 @@ Power analysis was performed on the implemented design to evaluate the power con
 
 The analysis includes:
 
-Internal power
-Switching power
-Leakage power
-Total power
+- Internal power
+- Switching power
+- Leakage power
+- Total power
 
 ## 8.1 Total Power
 <p align="center"> <img src="screenshots/08_power_analysis/total_power.png" width="900"> </p>
@@ -578,28 +598,17 @@ Design statistics were collected from the physical implementation to evaluate th
 
 # Final Implementation Results
 
-## Implementation Summary
-| Metric              |                Result |
-| ------------------- | --------------------: |
-| Technology          |                 ASAP7 |
-| Tool                | Cadence Innovus 20.11 |
-| Standard Cells      |                 7,550 |
-| Sequential Elements |                 2,590 |
-| Nets                |                 7,695 |
-| Clock Gates         |                    31 |
-| Clock Buffers       |                    52 |
-| Clock Period        |                700 ps |
-| Target Frequency    |             ~1.43 GHz |
-
 ## Timing Summary
 | Metric             |    Result |
 | ------------------ | --------: |
+| Clock Period       |    700 ps |
 | Setup WNS          | +1.836 ps |
 | Setup TNS          |      0 ps |
-| Setup Violations   |         0 |
 | Hold Slack         | +0.165 ps |
-| Hold Violations    |         0 |
 | Maximum Clock Skew | 20.700 ps |
+| Clock Gates        |        31 |
+| Clock Buffers      |        52 |
+| Target Frequency   | ~1.43 GHz |
 
 ## Power Summary
 | Metric          |        Result |
@@ -616,8 +625,7 @@ Design statistics were collected from the physical implementation to evaluate th
 | Placement Density | `[ADD VALUE]` |
 | Total Cell Area   | `[ADD VALUE]` |
 | Core Area         | `[ADD VALUE]` |
-| Worst Congestion  | `[ADD VALUE]` |
-| DRC Violations    | `[ADD VALUE]` |
+| Congestion        | `[ADD VALUE]` |
 
 ---
 
@@ -627,23 +635,15 @@ Physical design is an iterative process. During implementation, physical, timing
 
 ## Power-Via Connectivity
 
-Power-via connectivity was checked during power planning to verify proper connections between the power-routing layers.
+During power planning, power-via connectivity issues were identified during verification.
 
-### Debugging Process
-```text
-Power Planning
-      ↓
-Power Via Check
-      ↓
-Identify Connectivity Issues
-      ↓
-Review Power Ring / Stripe Configuration
-      ↓
-Modify Power Network
-      ↓
-Re-run Verification
-```
-The power network was iteratively checked to ensure proper connectivity before proceeding with subsequent implementation stages.
+### Debugging Approach
+
+1. Checked power-via connectivity.
+2. Identified affected routing layers.
+3. Reviewed power-ring and stripe configuration.
+4. Modified the power-network configuration.
+5. Re-ran connectivity verification.
 
 ## Timing Debugging
 
@@ -670,12 +670,12 @@ Routing congestion was monitored to ensure that the placement remained routable.
 
 The congestion analysis involved:
 
-Inspecting congestion maps.
-Identifying high-density regions.
-Evaluating placement density.
-Reviewing routing resources.
-Optimizing placement where required.
-Re-evaluating routing quality.
+- Inspecting congestion maps.
+- Identifying high-density regions.
+- Evaluating placement density.
+- Reviewing routing resources.
+- Optimizing placement where required.
+- Re-evaluating routing quality.
 
 ---
 # Tcl / Innovus Implementation
@@ -684,18 +684,18 @@ The physical design flow was controlled using Tcl scripts in Cadence Innovus.
 
 The scripts were used to automate:
 
-Library setup
-Design initialization
-Floorplanning
-IO placement
-Power planning
-Placement
-Optimization
-CTS
-Routing
-Timing analysis
-Power analysis
-Report generation
+- Library setup
+- Design initialization
+- Floorplanning
+- IO placement
+- Power planning
+- Placement
+- Optimization
+- CTS
+- Routing
+- Timing analysis
+- Power analysis
+- Report generation
 
 ## Flow Organization
 ```text
@@ -797,44 +797,44 @@ aes-physical-design-asap7/
 # Skills Demonstrated
 
 ## Physical Design
-RTL-to-GDSII implementation flow
-Floorplanning
-IO placement
-Power planning
-Standard-cell placement
-Placement optimization
-Clock Tree Synthesis
-Clock skew analysis
-Clock latency analysis
-Global routing
-Detailed routing
-Congestion analysis
-Physical verification
+- RTL-to-GDSII implementation flow
+- Floorplanning
+- IO placement
+- Power planning
+- Standard-cell placement
+- Placement optimization
+- Clock Tree Synthesis
+- Clock skew analysis
+- Clock latency analysis
+- Global routing
+- Detailed routing
+- Congestion analysis
+- Physical verification
 
 ## Static Timing Analysis
-SDC constraints
-Clock constraints
-Setup timing
-Hold timing
-WNS
-TNS
-Critical path analysis
-Clock skew
-Post-route timing analysis
+- SDC constraints
+- Clock constraints
+- Setup timing
+- Hold timing
+- WNS
+- TNS
+- Critical path analysis
+- Clock skew
+- Post-route timing analysis
 
 ## Power Analysis
-Internal power
-Switching power
-Leakage power
-Total power
-Power distribution analysis
+- Internal power
+- Switching power
+- Leakage power
+- Total power
+- Power distribution analysis
 
 ## Automation
-Tcl scripting
-Cadence Innovus automation
-Linux-based ASIC flow
-Report generation
-Physical-design debugging
+- Tcl scripting
+- Cadence Innovus automation
+- Linux-based ASIC flow
+- Report generation
+- Physical-design debugging
 
 ###Key Physical Design Concepts Demonstrated
 
@@ -975,17 +975,17 @@ Design Statistics
 ```
 The final implementation was analyzed for:
 
-Area
-Utilization
-Placement density
-Congestion
-Clock skew
-Setup timing
-Hold timing
-WNS
-TNS
-Total power
-Leakage power
+- Area
+- Utilization
+- Placement density
+- Congestion
+- Clock skew
+- Setup timing
+- Hold timing
+- WNS
+- TNS
+- Total power
+- Leakage power
 
 The project provides practical experience with:
 

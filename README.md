@@ -169,11 +169,11 @@ Additional layout views of standard cells used in the ASAP7 library.
   <tr>
     <td align="center">
       <b>AND2X2</b><br>
-      <img src="screenshots/10_asap7_cell_views/AND2X2_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/AND2X2_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>AND3X1</b><br>
-      <img src="screenshots/10_asap7_cell_views/AND3X1_ASAP7.png" width="220">
+      <img src="screenshots/asap7_cell_views/AND3X1_ASAP7.png" width="220">
     </td>
     <td align="center">
       <b>DFF</b><br>

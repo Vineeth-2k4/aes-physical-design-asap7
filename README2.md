@@ -326,7 +326,7 @@ Prepare the design for CTS.
 
 ---
 
-5. Clock Tree Synthesis
+# 5. Clock Tree Synthesis
 
 Clock Tree Synthesis (CTS) was performed to distribute the clock signal from the clock source to the sequential elements.
 

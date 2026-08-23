@@ -112,6 +112,7 @@ Analyze power consumption and leakage.
 Generate physical design reports using Cadence Innovus.
 Use Tcl scripting to automate the physical design flow.
 Understand the effect of each physical design stage on timing, power, area, and congestion.
+
 ---
 
 # Source RTL

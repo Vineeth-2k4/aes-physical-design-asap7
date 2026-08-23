@@ -14,7 +14,7 @@ Physical design implementation of an AES cryptographic design using Cadence Inno
 
 ## Physical Design Flow
 
-RTL → Synthesis → Floorplan → Power Planning → Placement → CTS → Routing → Signoff
+RTL → Synthesis → Floorplan → Power Planning → Placement → CTS → Routing → Post-Route Timing analysis
 
 ---
 

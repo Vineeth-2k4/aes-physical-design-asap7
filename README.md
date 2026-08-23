@@ -50,7 +50,7 @@ Standard-cell placement with virtual routing.
 ## 4. Pre-CTS 
 
 Standard-cell placement after placement optimization.
-![Pre-CTS](pre-cts.png)
+![Pre-CTS](prects.png)
 
 
 ## 5. Clock Tree Synthesis

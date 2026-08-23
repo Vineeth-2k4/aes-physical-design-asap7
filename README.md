@@ -118,6 +118,7 @@ Selected ASAP7 standard-cell layout views for reference.
 ![XOR](screenshots/asap7_cell_views/XOR_ASAP7.png)
 
 </details>
+
 ## Key Results
 
 | Metric | Result |

@@ -92,6 +92,16 @@ Post-route physical implementation.
 ![Clock Tree Summary](screenshots/05_cts/clock_tree_summary.png)
  
 ---
+## 7. Timing Analysis Reports
+
+### Setup Timing
+![Setup Timing](screenshots/07_timing_analysis/setup.png)
+
+### Hold Timing
+![Hold Timing](screenshots/07_timing_analysis/hold.png)
+
+### Timing Summary
+![Timing Summary](screenshots/07_timing_analysis/timing_summary.png)
 
 ## ASAP7 Standard Cell Layout Views
 

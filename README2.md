@@ -17,7 +17,7 @@
 
 
 <p align="center">
-  <img src="screenshots/06_routing/routed_design.png" width="900">
+  <img src="screenshots/06_routing/routed_design.png" width="700">
 </p>
 
 <h3 align="center">
@@ -301,7 +301,7 @@ Floorplanning establishes the physical boundaries of the design and defines the 
 | Aspect Ratio     | `[ADD VALUE]` |
 
 ## Floorplan with IO Placement
-<p align="center"> <img src="screenshots/01_floorplan/floorplan_io.png" width="900"> </p>
+<p align="center"> <img src="screenshots/01_floorplan/floorplan_io.png" width="700"> </p>
 
 ---
 
@@ -331,7 +331,7 @@ The power network consists of power rings and power stripes connected to the sta
 | Stripe Direction | `[ADD VALUE]` |
 
 ## Power Grid
-<p align="center"> <img src="screenshots/02_powerplanning/power_grid.png" width="900"> </p>
+<p align="center"> <img src="screenshots/02_powerplanning/power_grid.png" width="700"> </p>
 
 ---
 # 3. Placement
@@ -354,13 +354,13 @@ Placement attempts to achieve a balance between:
 - Prepare the design for CTS and routing.
 
 ## Placement
-<p align="center"> <img src="screenshots/03_placement/placement.png" width="900"> </p> 
+<p align="center"> <img src="screenshots/03_placement/placement.png" width="700"> </p> 
 
 ## Placement with Virtual Routing
 
 Virtual routing was used to evaluate the quality of the placement and estimate interconnect effects before actual routing.
 
-<p align="center"> <img src="screenshots/03_placement/placement1.png" width="900"> </p>
+<p align="center"> <img src="screenshots/03_placement/placement1.png" width="700"> </p>
 
 ---
 
@@ -378,7 +378,7 @@ The purpose of this stage is to improve the physical and timing quality of the d
 - Prepare the design for CTS.
 
 ## Pre-CTS Result
-<p align="center"> <img src="screenshots/04_prects/prects.png" width="900"> </p>
+<p align="center"> <img src="screenshots/04_prects/prects.png" width="700"> </p>
 
 ---
 
@@ -402,7 +402,7 @@ The primary objectives of CTS are to control:
 - Meet setup and hold timing requirements.
 
 ## CTS Implementation
-<p align="center"> <img src="screenshots/05_cts/cts.png" width="900"> </p>
+<p align="center"> <img src="screenshots/05_cts/cts.png" width="700"> </p>
 
 ## Clock Timing Summary
 <p align="center"> <img src="screenshots/05_cts/clock_timing_summary.png" width="900"> </p>
@@ -412,7 +412,7 @@ The primary objectives of CTS are to control:
 
 ## Clock Tree Debugger
 The clock tree was inspected after CTS to analyze clock distribution, skew, and latency.
-<p align="center"> <img src="screenshots/05_cts/clock_tree_debugger.png" width="900"> </p>
+<p align="center"> <img src="screenshots/05_cts/clock_tree_debugger.png" width="700"> </p>
 
 ## CTS Results
 | Metric             |        Result |
@@ -440,13 +440,13 @@ Routing establishes the physical interconnections between the placed standard ce
 - Account for post-route parasitic effects.
 
 ## Routed Design
-<p align="center"> <img src="screenshots/06_routing/routed_design.png" width="900"> </p>
+<p align="center"> <img src="screenshots/06_routing/routed_design.png" width="700"> </p>
 
 ## Setup Timing Map After Routing
-<p align="center"> <img src="screenshots/06_routing/setup_timing_map.png" width="900"> </p>
+<p align="center"> <img src="screenshots/06_routing/setup_timing_map.png" width="700"> </p>
 
 ## Hold Timing Map After Routing
-<p align="center"> <img src="screenshots/06_routing/hold_timing_map.png" width="900"> </p>
+<p align="center"> <img src="screenshots/06_routing/hold_timing_map.png" width="700"> </p>
 
 ## Routing Results
 | Metric                  |        Result |
@@ -556,13 +556,13 @@ The analysis includes:
 Design statistics were collected from the physical implementation to evaluate the area, utilization, placement density, and design composition.
 
 ## 9.1 Area Breakdown
-<p align="center"> <img src="screenshots/09_design_statistics/area_breakdown.png" width="900"> </p>
+<p align="center"> <img src="screenshots/09_design_statistics/area_breakdown.png" width="700"> </p>
 
 ## 9.2 Placement Density
-<p align="center"> <img src="screenshots/09_design_statistics/density_map.png" width="900"> </p>
+<p align="center"> <img src="screenshots/09_design_statistics/density_map.png" width="700"> </p>
 
 ## 9.3 Design Browser
-<p align="center"> <img src="screenshots/09_design_statistics/design_browser.png" width="900"> </p>
+<p align="center"> <img src="screenshots/09_design_statistics/design_browser.png" width="700"> </p>
 
 ## 9.4 Design Statistics
 

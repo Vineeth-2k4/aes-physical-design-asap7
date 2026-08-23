@@ -93,7 +93,7 @@ Post-Route Timing Analysis
 ```
 ---
 
-## Project Objectives
+# Project Objectives
 
 The main objectives of this project were:
 
@@ -113,7 +113,8 @@ Generate physical design reports using Cadence Innovus.
 Use Tcl scripting to automate the physical design flow.
 Understand the effect of each physical design stage on timing, power, area, and congestion.
 ---
-## Source RTL
+
+# Source RTL
 
 The AES RTL used in this project is based on the open-source Secworks AES project.
 
@@ -155,5 +156,107 @@ Clock Tree Synthesis
 Routing
  ↓
 Post-Route Timing Analysis
+
+---
+# Tools and Technology
+| Category             | Tool / Technology     |
+| -------------------- | --------------------- |
+| HDL                  | Verilog               |
+| Physical Design Tool | Cadence Innovus 20.11 |
+| Technology           | ASAP7                 |
+| Scripting            | Tcl                   |
+| Timing Constraints   | SDC                   |
+| Operating System     | Linux                 |
+| Starting RTL         | Secworks AES          |
+
+---
+# Design Information
+| Parameter            |                  Value |
+| -------------------- | ---------------------: |
+| Design               | AES Cryptographic Core |
+| RTL Source           |           Secworks AES |
+| Technology           |                  ASAP7 |
+| Physical Design Tool |  Cadence Innovus 20.11 |
+| Clock Period         |                 700 ps |
+| Target Frequency     |              ~1.43 GHz |
+| Standard Cells       |                  7,550 |
+| Sequential Elements  |                  2,590 |
+| Clock Gates          |                     31 |
+| Clock Buffers        |                     52 |
+| Nets                 |                  7,695 |
+
+---
+# Physical Design Flow
+
+The design was taken through the following ASIC physical design stages:
+                    AES RTL
+                       │
+                       ▼
+                  Synthesis
+                       │
+                       ▼
+                 Floorplanning
+                       │
+                       ▼
+                Power Planning
+                       │
+                       ▼
+                   Placement
+                       │
+                       ▼
+              Pre-CTS Optimization
+                       │
+                       ▼
+             Clock Tree Synthesis
+                       │
+                       ▼
+                    Routing
+                       │
+                       ▼
+              Post-Route Analysis
+                 ┌─────┼─────┐
+                 ▼     ▼     ▼
+              Timing  Power  Area
+
+---
+# 1. Floorplanning
+
+Floorplanning establishes the physical boundaries of the design and defines the environment for placement and routing.
+
+### Objectives
+Define die and core boundaries.
+Set the target core utilization.
+Define the core aspect ratio.
+Place input and output pins.
+Provide sufficient routing resources.
+Prepare the design for power planning and placement.
+## Floorplan Parameters
+| Parameter        |         Value |
+| ---------------- | ------------: |
+| Die Width        | `[ADD VALUE]` |
+| Die Height       | `[ADD VALUE]` |
+| Core Width       | `[ADD VALUE]` |
+| Core Height      | `[ADD VALUE]` |
+| Core Utilization | `[ADD VALUE]` |
+| Aspect Ratio     | `[ADD VALUE]` |
+## Floorplan with IO Placement
+<p align="center"> <img src="screenshots/01_floorplan/floorplan_io.png" width="900"> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  ↓
 Power Analysis

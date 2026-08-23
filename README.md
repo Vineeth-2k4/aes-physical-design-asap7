@@ -52,6 +52,8 @@ Standard-cell placement with virtual routing.
 Standard-cell placement after placement optimization.
 ![Pre-CTS](screenshots/04_prects/prects.png)
 
+---
+
 ### Design Statistics
 
 | Area Breakdown | Placement Density |

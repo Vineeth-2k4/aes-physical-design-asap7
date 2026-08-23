@@ -81,25 +81,22 @@ Post-route physical implementation.
 
 ---
 
-# Timing Views
-
-## Setup Timing
-
-![Setup Timing](screenshots/06_routing/setup_timing_map.png)
-
-## Hold Timing
-
-![Hold Timing](screenshots/06_routing/hold_timing_map.png)
-
-
----
 ## 7. Timing Analysis Reports
 
 ### Setup Timing
 ![Setup Timing](screenshots/07_timing_analysis/setup.png)
 
+## Setup Timing
+
+![Setup Timing](screenshots/06_routing/setup_timing_map.png)
+
 ### Hold Timing
 ![Hold Timing](screenshots/07_timing_analysis/hold.png)
+
+## Hold Timing
+
+![Hold Timing](screenshots/06_routing/hold_timing_map.png)
+
 
 ### Timing Summary
 ![Timing Summary](screenshots/07_timing_analysis/timing_summary.png)

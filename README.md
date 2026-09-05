@@ -233,20 +233,20 @@ The design was constrained using an SDC-based timing environment.
 
 | Constraint | Value |
 |---|---:|
-| Clock Name | `[ADD VALUE]` |
-| Clock Port | `[ADD VALUE]` |
+| Clock Name | clk |
+| Clock Port | clk |
 | Period | 700 ps |
-| Waveform | `[ADD VALUE]` |
+| Waveform | 350 |
 
 ### I/O Constraints
 
 | Constraint | Value |
 |---|---:|
-| Input Delay | `[ADD VALUE]` |
-| Output Delay | `[ADD VALUE]` |
-| Input Transition | `[ADD VALUE]` |
-| Output Load | `[ADD VALUE]` |
-| Driving Cell | `[ADD VALUE]` |
+| Input Delay | 500 |
+| Output Delay | 500 |
+| Input Transition | 0.06 |
+| Output Load | 0.05 |
+| Driving Cell | BUFx2_ASAP7_75t_R |
 
 --- 
 
@@ -299,12 +299,12 @@ Floorplanning establishes the physical boundaries of the design and defines the 
 ## Floorplan Parameters
 | Parameter        |         Value |
 | ---------------- | ------------: |
-| Die Width        | `[ADD VALUE]` |
-| Die Height       | `[ADD VALUE]` |
-| Core Width       | `[ADD VALUE]` |
-| Core Height      | `[ADD VALUE]` |
-| Core Utilization | `[ADD VALUE]` |
-| Aspect Ratio     | `[ADD VALUE]` |
+| Die Width        | 209.952 µm |
+| Die Height       | 209.952 µm |
+| Core Width       |  190.08 µm |
+| Core Height      |  190.08 µm |
+| Core Utilization | 64.827% |
+| Aspect Ratio     | 1 |
 
 ## Floorplan with IO Placement
 <p align="center"> <img src="screenshots/01_floorplan/floorplan_io.png" width="700"> </p>
@@ -329,12 +329,15 @@ The power network consists of power rings and power stripes connected to the sta
 | Parameter        | Value         |
 | ---------------- | ------------- |
 | Power Nets       | VDD / VSS     |
-| Ring Layers      | `[ADD VALUE]` |
-| Stripe Layers    | `[ADD VALUE]` |
-| Stripe Width     | `[ADD VALUE]` |
-| Stripe Spacing   | `[ADD VALUE]` |
-| Stripe Pitch     | `[ADD VALUE]` |
-| Stripe Direction | `[ADD VALUE]` |
+| Ring Layers      | M4 M5 |
+| Ring Width     | 0.192 |
+| Ring Spacing     | 0.192 |
+| Ring Offset     | 0.5 |
+| Stripe Layers    | M4 M5 |
+| Stripe Width     | 0.192 |
+| Stripe Spacing   | 0.192 |
+| Stripe Pitch / set-to-set distance    | 20 |
+| Stripe Direction | M5: Vertical; M4: Horizontal |
 
 ## Power Grid
 <p align="center"> <img src="screenshots/02_powerplanning/power_grid.png" width="700"> </p>
@@ -421,14 +424,23 @@ The clock tree was inspected after CTS to analyze clock distribution, skew, and 
 <p align="center"> <img src="screenshots/05_cts/clock_tree_debugger.png" width="700"> </p>
 
 ## CTS Results
-| Metric             |        Result |
-| ------------------ | ------------: |
-| Clock Period       |        700 ps |
-| Clock Buffers      |            52 |
-| Clock Gates        |            31 |
-| Maximum Clock Skew |     20.700 ps |
-| Clock Latency      | `[ADD VALUE]` |
-| Clock Transition   | `[ADD VALUE]` |
+| Metric                  | Result        |
+| ----------------------- | ------------: |
+| Clock Period            | 700 ps        |
+| Clock Buffers           | 52            |
+| Clock Gates             | 31            |
+| Maximum Clock Skew      | 19.100 ps     |
+| Clock Latency            | 8.618 ps      |
+| Clock Transition        | Not reported  |
+| Maximum Launch Latency  | 8.618 ps      |
+| Minimum Capture Latency | -11.882 ps    |
+| Interclock Skew         | 19.100 ps     |
+| Clock Jitter (OCV)      | -74.782 ps    |
+
+## OCV Analysis
+| Metric             | Result     |
+| ------------------ | ---------: |
+| Clock Jitter (OCV) | -74.782 ps |
 
 ---
 
@@ -455,13 +467,23 @@ Routing establishes the physical interconnections between the placed standard ce
 <p align="center"> <img src="screenshots/06_routing/hold_timing_map.png" width="700"> </p>
 
 ## Routing Results
-| Metric                  |        Result |
-| ----------------------- | ------------: |
-| Routing Status          | `[ADD VALUE]` |
-| DRC Violations          | `[ADD VALUE]` |
-| Routing Violations      | `[ADD VALUE]` |
-| Worst Congestion        | `[ADD VALUE]` |
-| Global Routing Overflow | `[ADD VALUE]` |
+## Routing Results
+| Metric                     | Result                    |
+| -------------------------- | ------------------------: |
+| Routing Status             | Completed / 0 Track Fails |
+| DRC Violations             | 1000+                     |
+| Routing Violations         | Not Reported              |
+| Worst Congestion           | 15.7% H / 10.1% V         |
+| Global Routing Overflow    | 0                         |
+| Max Congestion Hotspot     | 0.00                      |
+
+## Pre-Physical Verification
+| Metric                     | Result |
+| -------------------------- | -----: |
+| PG Short Violations        | 0      |
+| Missing PG Vias            | 7      |
+| Metal Density Violations   | 3626   |
+| DRC Violations             | 1000+  |
 
 ---
 
@@ -476,15 +498,15 @@ Both setup and hold timing were analyzed.
 Setup analysis verifies that data reaches the receiving sequential element before the required capture clock edge.
 
 ### Setup Results
-| Metric                     |        Result |
-| -------------------------- | ------------: |
-| Clock Period               |        700 ps |
-| Worst Negative Slack (WNS) |     +1.836 ps |
-| Total Negative Slack (TNS) |          0 ps |
-| Setup Violations           |             0 |
-| Critical Path Delay        | `[ADD VALUE]` |
-| Critical Path Startpoint   | `[ADD VALUE]` |
-| Critical Path Endpoint     | `[ADD VALUE]` |
+| Metric                     | Result |
+| -------------------------- | ------: |
+| Clock Period               | 700 ps |
+| Worst Negative Slack (WNS) | +1.836 ps |
+| Total Negative Slack (TNS) | 0 ps |
+| Setup Violations            | 0 |
+| Critical Path Delay         | 667.500 ps |
+| Critical Path Startpoint    | init_reg_reg/CLK |
+| Critical Path Endpoint      | core_keymem_key_mem_reg[3][78]/D |
 
 ## Setup Timing Report
 <p align="center"> <img src="screenshots/07_timing_analysis/setup.png" width="900"> </p>
@@ -496,11 +518,15 @@ Setup analysis verifies that data reaches the receiving sequential element befor
 Hold analysis verifies that data does not arrive too early at the receiving sequential element after the active clock edge.
 
 ### Hold Results
-| Metric             |        Result |
-| ------------------ | ------------: |
-| Worst Hold Slack   |     +0.165 ps |
-| Hold Violations    |             0 |
-| Critical Hold Path | `[ADD VALUE]` |
+## Hold Results
+| Metric                     | Result |
+| -------------------------- | -----: |
+| Worst Hold Slack (WHS)     | +0.165 ps |
+| Total Hold Slack (THS)     | 0 ps |
+| Hold Violations            | 0 |
+| Critical Path Delay        | 18.500 ps |
+| Critical Path Startpoint   | write_data[29] |
+| Critical Path Endpoint     | block_reg_reg[2][29]/D |
 
 
 ## Hold Timing Report
@@ -548,12 +574,12 @@ The analysis includes:
 <p align="center"> <img src="screenshots/08_power_analysis/power_distribution.png" width="900"> </p>
 
 ## Power Results
-| Metric          |        Result |
-| --------------- | ------------: |
-| Total Power     |      4.083 mW |
-| Leakage Power   |      0.114 mW |
-| Internal Power  | `[ADD VALUE]` |
-| Switching Power | `[ADD VALUE]` |
+| Metric          | Result |
+| --------------- | -----: |
+| Total Power     | 4.083 mW |
+| Leakage Power   | 0.114 mW |
+| Internal Power  | 2.628 mW |
+| Switching Power | 1.340 mW |
 
 ---
 
@@ -615,14 +641,6 @@ Design statistics were collected from the physical implementation to evaluate th
 | Clock Gates        |        31 |
 | Clock Buffers      |        52 |
 | Target Frequency   | ~1.43 GHz |
-
-## Power Summary
-| Metric          |        Result |
-| --------------- | ------------: |
-| Total Power     |      4.083 mW |
-| Leakage Power   |      0.114 mW |
-| Internal Power  | `[ADD VALUE]` |
-| Switching Power | `[ADD VALUE]` |
 
 ## Physical Summary
 | Metric            |        Result |

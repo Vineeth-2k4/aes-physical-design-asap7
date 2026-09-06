@@ -598,18 +598,19 @@ Design statistics were collected from the physical implementation to evaluate th
 
 ## 9.4 Design Statistics
 
-| Metric              |        Result |
-| ------------------- | ------------: |
-| Standard Cells      |         7,550 |
-| Sequential Elements |         2,590 |
-| Nets                |         7,695 |
-| Clock Gates         |            31 |
-| Clock Buffers       |            52 |
-| Total Cell Area     | `[ADD VALUE]` |
-| Core Area           | `[ADD VALUE]` |
-| Utilization         | `[ADD VALUE]` |
-| Placement Density   | `[ADD VALUE]` |
+## 9.4 Design Statistics
 
+| Metric              | Result |
+| ------------------- | -----: |
+| Standard Cells      | 7,550 |
+| Sequential Elements | 2,590 |
+| Nets                | 7,695 |
+| Clock Gates         | 31 |
+| Clock Buffers       | 52 |
+| Total Cell Area     | 22,623.494 µm² |
+| Core Area           | 36,130.41 µm² |
+| Utilization         | 62.62% |
+| Placement Density   | 54.86% |
 ---
 
 # Physical Design Stage Summary
@@ -643,13 +644,13 @@ Design statistics were collected from the physical implementation to evaluate th
 | Target Frequency   | ~1.43 GHz |
 
 ## Physical Summary
-| Metric            |        Result |
-| ----------------- | ------------: |
-| Core Utilization  | `[ADD VALUE]` |
-| Placement Density | `[ADD VALUE]` |
-| Total Cell Area   | `[ADD VALUE]` |
-| Core Area         | `[ADD VALUE]` |
-| Congestion        | `[ADD VALUE]` |
+| Metric            | Result |
+| ----------------- | -----: |
+| Core Utilization  | 62.62% |
+| Placement Density | 54.86% |
+| Total Cell Area   | 22,623.494 µm² |
+| Core Area         | 36,130.41 µm² |
+| Congestion        | 0% Global Routing Overflow |
 
 ---
 
